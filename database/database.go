@@ -1,11 +1,8 @@
-
-
-package main
+package database
 
 import (
 	"database/sql"
 	"fmt"
-	"github.com/jeri06/service/server"
 	"log"
 )
 
@@ -19,8 +16,8 @@ type Db struct {
 	*sql.DB
 }
 
-func newOpen() (Db, error) {
-	dbinfo := fmt.Sprintf("user=%s password=%s dbname=%s sslmde=disable", DatabaseUser, DatabasePassword, DatabaseName)
+func NewOpen() (Db, error) {
+	dbinfo := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable", DatabaseUser, DatabasePassword, DatabaseName)
 	db, err := sql.Open("postgres", dbinfo)
 	if err != nil {
 		log.Fatal("Invalid DBconfig:", err)
@@ -31,14 +28,3 @@ func newOpen() (Db, error) {
 
 	return Db{db}, err
 }
-
-func main() {
-
-	 server.Server()
-	//fmt.Println("ok")
-
-}
-
-
-
-
