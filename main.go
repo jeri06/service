@@ -12,7 +12,7 @@ import (
 const (
 	DatabaseUser     = "postgres"
 	DatabasePassword = "root"
-	DatabaseName     = "quest"
+	DatabaseName     = "golang"
 )
 
 type Db struct {
@@ -36,7 +36,20 @@ func main() {
 
 	 server.Server()
 	//fmt.Println("ok")
-
+	//
+	//select {
+	//case messages <- msg:messages := make(chan string,1)
+	//	//// signals := make(chan bool)
+	//	//
+	//	////go func(){
+	//	//	messages <- "hi"
+	//	////}()
+	//	//msg := <- messages
+	//	//fmt.Println(msg)
+	//	fmt.Println("sent message", msg)
+	//default:
+	//	fmt.Println("no message sent")
+	//}
 }
 
 

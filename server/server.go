@@ -33,7 +33,7 @@ func Server(){
 	router := mux.NewRouter()
 
 	router.HandleFunc("/user/{id}", controller.GetUser).Methods("GET")
-
+	router.HandleFunc("/data/",controller.GetAll).Methods("GET")
 	//router.HandleFunc(“/users”, controller.CreateUser).Methods(“POST”)
 	//router.HandleFunc(“/user/{id}”, controller.UpdateUser).Methods(“PUT”)
 	//router.HandleFunc(“/user/{id}”, controller.DeleteUser).Methods(“DELETE”)
